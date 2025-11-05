@@ -25,7 +25,7 @@ const AgentAvatar = () => (
   </div>
 );
 
-const MessageBubble = ({ sender, text }) => {
+const MessageBubble = ({ sender, text }: { sender: string; text: string }) => {
   const isAgent = sender === "agent";
   return (
     <motion.div
@@ -57,7 +57,7 @@ export const ConversationShowcase = () => {
   useEffect(() => {
     if (isInView && messages.length < conversationFlow.length) {
       const timer = setInterval(() => {
-        setMessages((prev) => {
+        setMessages((prev: any) => {
           if (prev.length < conversationFlow.length) {
             return [...prev, conversationFlow[prev.length]];
           }
@@ -100,11 +100,11 @@ export const ConversationShowcase = () => {
           <div className="h-[24rem] overflow-y-auto p-4">
             <div className="flex flex-col gap-6">
               <AnimatePresence>
-                {messages.map((msg, index) => (
+                {messages.map((msg: any, index: number) => (
                   <MessageBubble
                     key={index}
-                    sender={msg.sender}
-                    text={msg.text}
+                    sender={msg.sender as string}
+                    text={msg.text as string}
                   />
                 ))}
               </AnimatePresence>

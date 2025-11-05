@@ -22,17 +22,7 @@ const faqData = [
   },
 ];
 
-const AccordionItem = ({
-  question,
-  answer,
-  isOpen,
-  onClick,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-}) => (
+const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => (
   <motion.div
     layout
     className="rounded-2xl border border-white/20 bg-white/5 p-6 backdrop-blur-lg"
