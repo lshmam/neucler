@@ -5,6 +5,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import { useConversation } from "@elevenlabs/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2Icon, PhoneIcon, PhoneOffIcon } from "lucide-react";
+import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -59,7 +60,7 @@ const ACQUIRED_AI_AGENT = {
 // A more descriptive state type for clarity
 type AgentState = "idle" | "connecting" | "connected" | "disconnecting";
 
-export const HeroAgent4 = () => {
+export const HeroAgent5 = () => {
   const [agentState, setAgentState] = useState<AgentState>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -138,8 +139,30 @@ export const HeroAgent4 = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative z-10 w-full max-w-5xl"
           >
-            <div className="relative z-10 flex w-full flex-col text-white bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl min-h-[85vh]">
-              <header className="flex items-center justify-between p-6 md:p-8">
+            <div className="relative z-10 flex w-full flex-col text-white bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl min-h-[85vh] overflow-hidden">
+              {/* --- GRADIENT BACKGROUND --- */}
+              <ShaderGradientCanvas
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  pointerEvents: "none",
+                }}
+                pixelDensity={0.1}
+                precision="low" // <--- FIX APPLIED HERE
+              >
+                <ShaderGradient
+                  grain="off"
+                  color1="#ff5005"
+                  color2="#dbba95"
+                  color3="#d0bce1"
+                />
+              </ShaderGradientCanvas>
+
+              {/* --- HERO CONTENT --- */}
+              <header className="flex items-center justify-between p-6 md:p-8 z-10">
                 <span className="text-xl font-medium tracking-tighter text-white">
                   neucler
                 </span>
@@ -152,7 +175,7 @@ export const HeroAgent4 = () => {
                 </Button>
               </header>
 
-              <main className="flex flex-1 flex-col items-center justify-center gap-8 text-center p-6">
+              <main className="flex flex-1 flex-col items-center justify-center gap-8 text-center p-6 z-10">
                 <h1 className="text-5xl md:text-7xl font-light tracking-tight text-white">
                   {/* --- ANIMATED HEADLINE --- */}
                   <div>

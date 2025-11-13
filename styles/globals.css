@@ -173,7 +173,7 @@ body {
   left: 0;
   right: 0;
   height: 500px; /* The height of the fade effect */
-  z-index: -1;
+  z-index: 0;
 
   /* The Gradient: Fades from a transparent version of your shader color to the section's solid color */
   background: linear-gradient(
@@ -181,4 +181,18 @@ body {
     rgba(240, 240, 240, 0.5),
     /* Mimics your shader's light color */ #f7f7f7
   );
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(-20px) translateX(10px) rotate(0deg);
+  }
+  to {
+    transform: translateY(30px) translateX(-40px) rotate(180deg);
+  }
+}
+
+body,
+main {
+  background-color: transparent !important;
 }

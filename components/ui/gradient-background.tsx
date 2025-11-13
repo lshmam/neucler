@@ -16,7 +16,7 @@ export const GradientBackground = () => {
         height: "100vh",
         background: "#ffffff",
       }}
-      pixelDensity={1}
+      pixelDensity={0.1}
       pointerEvents="none"
     >
       <ShaderGradient
