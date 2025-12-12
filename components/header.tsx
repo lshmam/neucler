@@ -67,7 +67,7 @@ export function Header() {
             >
               Sign in
             </a>
-            <a href="https://cal.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer">
               <Button className="bg-terracotta hover:bg-terracotta/90 text-white rounded-full px-6 py-2.5 btn-hover-lift text-sm font-medium">
                 Get a Demo
               </Button>
@@ -112,7 +112,7 @@ export function Header() {
             <a href="https://app.neucler.com" className="block px-4 py-2 text-muted-foreground">
               Sign in
             </a>
-            <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="w-full bg-terracotta hover:bg-terracotta/90 text-white rounded-full">
                 Get a Demo
               </Button>

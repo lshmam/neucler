@@ -219,7 +219,7 @@ export function AISolutionSection() {
           className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <a href="https://cal.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer">
             <Button className="bg-foreground hover:bg-foreground/90 text-background rounded-full px-8 py-6 btn-hover-lift">
               Talk to Sales
             </Button>

@@ -9,7 +9,7 @@ export function SolutionsCTA() {
         <p className="text-background/70 mb-8 max-w-lg mx-auto">
           Your new AI Employee wants to get in touch to find a plan for you.
         </p>
-        <a href="https://cal.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer">
           <Button className="bg-terracotta hover:bg-terracotta/90 text-white rounded-full px-8 py-6 text-lg">
             Talk to Sales
           </Button>

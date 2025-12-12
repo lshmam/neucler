@@ -16,7 +16,7 @@ export function SolutionsHero() {
               and sells while your mechanics focus on repairs. Let AI close leads.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://cal.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-terracotta hover:bg-terracotta/90 text-white rounded-full px-8 py-6 text-lg">
                   Talk to Sales
                   <ArrowRight className="w-5 h-5 ml-2" />

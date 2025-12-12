@@ -63,7 +63,7 @@ export function HeroSection() {
             className={`flex flex-col items-center justify-center gap-4 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <a href="https://cal.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer">
               <Button className="bg-terracotta hover:bg-terracotta/90 text-white rounded-full px-8 py-6 text-lg btn-hover-lift shadow-lg shadow-terracotta/25 hover:shadow-xl hover:shadow-terracotta/30 transition-all duration-300">
                 Get a Demo
               </Button>
