@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full ${scrolled
+      className={`fixed top-16 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full ${scrolled
         ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border/50"
         : "bg-background/60 backdrop-blur-md border border-transparent"
         }`}
