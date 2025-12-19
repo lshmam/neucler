@@ -1,12 +1,10 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { LeadResponseSection } from "@/components/lead-response-section"
-import { AISolutionSection } from "@/components/ai-solution-section"
-import { AIEmployeeSection } from "@/components/ai-employee-section"
+import { ProblemSection } from "@/components/problem-section"
+import { FeaturesGrid } from "@/components/features-grid"
 import { EasyInstallSection } from "@/components/easy-install-section"
-import { TrustSection } from "@/components/trust-section"
-import { RevenueCalculator } from "@/components/revenue-calculator"
 import { QuoteSection } from "@/components/quote-section"
+import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -15,13 +13,11 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <LeadResponseSection />
-      <AISolutionSection />
-      <AIEmployeeSection />
+      <ProblemSection />
+      <FeaturesGrid />
       <EasyInstallSection />
-      <TrustSection />
-      <RevenueCalculator />
       <QuoteSection />
+      <FAQSection />
       <CTASection />
       <Footer />
     </main>
