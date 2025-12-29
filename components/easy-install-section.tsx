@@ -7,20 +7,20 @@ const steps = [
   {
     num: "01",
     icon: Phone,
-    title: "Connect your Phone & Email",
-    description: "We integrate with Twilio & Gmail. Your existing phone number stays the same.",
+    title: "Connect Your Phone Lines",
+    description: "We integrate with your existing phone system. Your business number stays the same.",
   },
   {
     num: "02",
     icon: Brain,
-    title: "The AI Learns your Shop",
-    description: "We ingest your past invoices, pricing sheets, and SOPs to build your digital brain.",
+    title: "AI Learns Your Business",
+    description: "We train your AI on your services, pricing, and FAQs to handle calls like your best rep.",
   },
   {
     num: "03",
     icon: Zap,
-    title: "Turn on Autopilot",
-    description: "The AI handles status checks and routine calls. You handle the real work.",
+    title: "Never Miss a Lead",
+    description: "AI answers calls 24/7, qualifies leads, and books appointments—even when you're busy.",
   },
 ]
 
@@ -98,16 +98,16 @@ export function EasyInstallSection() {
               {/* Step Card */}
               <div
                 className={`bg-background rounded-2xl p-6 lg:p-8 shadow-lg border transition-all duration-500 ${activeStep === index
-                    ? "border-terracotta shadow-terracotta/10 scale-[1.02]"
-                    : "border-border"
+                  ? "border-terracotta shadow-terracotta/10 scale-[1.02]"
+                  : "border-border"
                   }`}
               >
                 {/* Step Number & Icon */}
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${activeStep >= index
-                        ? "bg-terracotta text-white"
-                        : "bg-terracotta/10 text-terracotta"
+                      ? "bg-terracotta text-white"
+                      : "bg-terracotta/10 text-terracotta"
                       }`}
                   >
                     {activeStep > index ? (

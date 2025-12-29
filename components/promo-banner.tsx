@@ -12,7 +12,7 @@ export function PromoBanner() {
         <div className="bg-foreground text-background py-2.5 px-4 relative">
             <div className="container mx-auto flex items-center justify-center">
                 <p className="text-sm font-medium text-center">
-                    Start your 7 day free trial today
+                    Book a demo and see Neucler in action →
                 </p>
                 <button
                     onClick={() => setIsVisible(false)}

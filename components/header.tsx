@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
@@ -9,21 +9,42 @@ import { Button } from "@/components/ui/button"
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+      const currentScrollY = window.scrollY
+
+      // Determine if scrolled past threshold
+      setScrolled(currentScrollY > 20)
+
+      // Hide on scroll down, show on scroll up (only after scrolling past 100px)
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY.current) {
+          // Scrolling down
+          setHidden(true)
+        } else {
+          // Scrolling up
+          setHidden(false)
+        }
+      } else {
+        setHidden(false)
+      }
+
+      lastScrollY.current = currentScrollY
     }
-    window.addEventListener("scroll", handleScroll)
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <header
-      className={`fixed top-16 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full ${scrolled
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full ${scrolled
         ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border/50"
         : "bg-background/60 backdrop-blur-md border border-transparent"
-        }`}
+        } ${hidden ? "-translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <div className="px-4 sm:px-6 md:px-12">
         <div className="flex items-center justify-between h-16 gap-4">

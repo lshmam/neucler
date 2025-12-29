@@ -40,7 +40,7 @@ const features = [
   {
     id: "customized",
     icon: Settings,
-    title: "AI customized to your practice.",
+    title: "AI customized to your business.",
     description:
       "Your AI Employee learns your business, products, and processes to deliver personalized responses that match your brand voice.",
     lottieUrl: null,
@@ -83,11 +83,10 @@ export function AISolutionSection() {
             NEUCLER&apos;S AI SOLUTION
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            AI for automotive sales and service.
+            AI built for inbound call businesses.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Jerry is the only AI Employee that gives your dealership AI customized to your brand with the ability to
-            handle any talk track for sales or service.
+            The only AI Employee that handles your calls 24/7, qualifies leads instantly, and books appointments—so you never miss another opportunity.
           </p>
         </div>
 

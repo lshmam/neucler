@@ -6,23 +6,23 @@ import { Phone, GraduationCap, PhoneMissed, DollarSign } from "lucide-react"
 const painPoints = [
     {
         icon: Phone,
-        title: "The Phone Chaos",
-        stat: "4 hours/day",
-        description: "Service Advisors spend 4 hours a day answering 'Is my car ready?' instead of selling repairs.",
+        title: "The Phone Flood",
+        stat: "62%",
+        description: "Over 60% of inbound calls go unanswered during peak hours. Each missed call is a lost opportunity.",
         color: "bg-red-500/10 text-red-600",
     },
     {
         icon: GraduationCap,
-        title: "The Training Gap",
-        stat: "6 months",
-        description: "New hires take 6 months to learn your pricing and policies. One mistake costs you thousands.",
+        title: "Slow Response Time",
+        stat: "78%",
+        description: "78% of leads go with the first business to respond. Delayed callbacks mean lost deals.",
         color: "bg-yellow-500/10 text-yellow-600",
     },
     {
         icon: PhoneMissed,
-        title: "The Missed Leads",
-        stat: "$150k/year",
-        description: "30% of calls go to voicemail while your team is under a car. That's $150k/year in lost revenue.",
+        title: "The Revenue Leak",
+        stat: "$200k/year",
+        description: "Missed calls and poor follow-up cost call-heavy businesses over $200k annually in lost revenue.",
         color: "bg-orange-500/10 text-orange-600",
     },
 ]
