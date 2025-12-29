@@ -20,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <LeadStatsSection />
       <FeaturesShowcase2 />
-      <IntegrationSection2 />
+      {/* <IntegrationSection2 /> */}
       {/* <ProblemSection /> */}
       <FeaturesGrid />
       {/* <EasyInstallSection /> */}

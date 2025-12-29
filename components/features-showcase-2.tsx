@@ -299,10 +299,10 @@ export function FeaturesShowcase2() {
     }
 
     return (
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-10 md:py-24 bg-background">
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header */}
-                <div className="text-center mb-12 md:mb-16">
+                <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
                         How it works
                     </h2>
@@ -311,12 +311,12 @@ export function FeaturesShowcase2() {
                 {/* Scroll-driven layout */}
                 <div ref={containerRef} className="lg:grid lg:grid-cols-2 lg:gap-16 max-w-6xl mx-auto">
                     {/* Left side - Text content with step indicators */}
-                    <div className="space-y-8 lg:space-y-32">
+                    <div className="space-y-4 lg:space-y-32">
                         {features.map((feature, index) => (
                             <div
                                 key={index}
                                 data-feature-index={index}
-                                className="min-h-[60vh] flex items-center"
+                                className="lg:min-h-[60vh] flex items-center"
                             >
                                 {/* Mobile: Show full card */}
                                 <div className="lg:hidden w-full">

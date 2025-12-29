@@ -32,7 +32,7 @@ export function Footer() {
   }, [])
 
   return (
-    <footer ref={footerRef} className="bg-foreground text-background py-16 overflow-hidden">
+    <footer ref={footerRef} className="bg-foreground text-background pt-8 pb-6 md:py-16 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         {/* Footer Links */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
@@ -99,17 +99,7 @@ export function Footer() {
         </div>
 
         {/* Large Brand Logo with reveal animation */}
-        <div
-          className={`mt-12 text-center overflow-hidden transition-all duration-1000 delay-700 ${isVisible ? "opacity-100" : "opacity-0"
-            }`}
-        >
-          <div
-            className={`transition-transform duration-1000 ${isVisible ? "translate-y-0" : "translate-y-full"
-              }`}
-          >
 
-          </div>
-        </div>
       </div>
     </footer>
   )
