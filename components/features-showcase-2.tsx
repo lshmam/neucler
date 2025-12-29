@@ -209,17 +209,19 @@ export function FeaturesShowcase2() {
             let closestDistance = Infinity
             let closestIndex = 0
 
-            items.forEach((item, index) => {
+            const itemElements = Array.from(items) as HTMLElement[]
+            for (let index = 0; index < itemElements.length; index++) {
+                const item = itemElements[index]
                 const rect = item.getBoundingClientRect()
                 const itemCenter = rect.top + rect.height / 2
                 const distance = Math.abs(itemCenter - viewportCenter)
 
                 if (distance < closestDistance) {
                     closestDistance = distance
-                    closestItem = item as HTMLElement
+                    closestItem = item
                     closestIndex = index
                 }
-            })
+            }
 
             setActiveIndex(closestIndex)
 
