@@ -41,49 +41,47 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full ${scrolled
-        ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border/50"
-        : "bg-background/60 backdrop-blur-md border border-transparent"
-        } ${hidden ? "-translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
+      className={`fixed top-2 left-2 right-2 z-50 transition-all duration-500 rounded-2xl ${mobileMenuOpen
+        ? "backdrop-blur-xl"
+        : scrolled
+          ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border/50"
+          : "bg-transparent"
+        } ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
     >
-      <div className="px-4 sm:px-6 md:px-12">
-        <div className="flex items-center justify-between h-16 gap-4">
-          {/* Logo with hover animation */}
-          <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <Image
-              src="/neucler-logo.png"
-              alt="Neucler Logo"
-              width={32}
-              height={32}
-              className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-            />
-            <Image
-              src="/neucler-type.svg"
-              alt="Neucler"
-              width={100}
-              height={24}
-              className="hidden sm:block transition-opacity duration-300 group-hover:opacity-80"
-            />
-          </Link>
+      <div className="px-4 sm:px-6 md:px-8">
+        <div className="flex items-center justify-between h-14 gap-4">
+          {/* Logo and Nav grouped together on the left */}
+          <div className="flex items-center gap-6">
+            {/* Logo */}
+            <Link href="/" className="flex items-center group flex-shrink-0">
+              <Image
+                src="/neucler-logo-new.png"
+                alt="Neucler Logo"
+                width={36}
+                height={36}
+                className={`transition-all duration-300 group-hover:scale-110 ${scrolled ? "brightness-0" : ""}`}
+              />
+            </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {["Solutions", "Pricing"].map((item, index) => (
-              <Link
-                key={item}
-                href={item === "Solutions" ? "/solutions" : "/pricing"}
-                className="relative flex items-center gap-1 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {item}
-              </Link>
-            ))}
-          </nav>
+            {/* Desktop Nav - closer to logo */}
+            <nav className="hidden lg:flex items-center gap-1">
+              {["Solutions", "Pricing"].map((item, index) => (
+                <Link
+                  key={item}
+                  href={item === "Solutions" ? "/solutions" : "/pricing"}
+                  className={`relative flex items-center gap-1 px-3 py-2 text-sm transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"}`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {item}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="https://app.neucler.com"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className={`text-sm transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"}`}
             >
               Sign in
             </a>
@@ -101,19 +99,19 @@ export function Header() {
           >
             <div className="relative w-6 h-6">
               <Menu
-                className={`w-6 h-6 absolute transition-all duration-300 ${mobileMenuOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"}`}
+                className={`w-6 h-6 absolute transition-all duration-300 ${scrolled ? "text-foreground" : "text-white"} ${mobileMenuOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"}`}
               />
               <X
-                className={`w-6 h-6 absolute transition-all duration-300 ${mobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}`}
+                className={`w-6 h-6 absolute transition-all duration-300 ${scrolled ? "text-foreground" : "text-white"} ${mobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}`}
               />
             </div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu with slide animation */}
+      {/* Mobile Menu with slide animation - Transparent like header */}
       <div
-        className={`lg:hidden bg-background/90 backdrop-blur-xl border-t border-border/50 overflow-hidden transition-all duration-500 ease-in-out rounded-b-3xl ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden backdrop-blur-xl overflow-hidden transition-all duration-500 ease-in-out rounded-b-2xl ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
       >
         <nav className="px-6 py-4 space-y-2">
@@ -121,15 +119,15 @@ export function Header() {
             <Link
               key={item}
               href={item === "Solutions" ? "/solutions" : "/pricing"}
-              className={`flex items-center justify-between w-full px-4 py-3 text-left text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-300 ${mobileMenuOpen ? "animate-fade-in-up" : ""}`}
+              className={`block w-full px-4 py-3 text-right text-white/80 hover:text-white transition-all duration-300 ${mobileMenuOpen ? "animate-fade-in-up" : ""}`}
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
             </Link>
           ))}
-          <div className="pt-4 border-t border-border space-y-2">
-            <a href="https://app.neucler.com" className="block px-4 py-2 text-muted-foreground">
+          <div className="pt-4 space-y-2">
+            <a href="https://app.neucler.com" className="block px-4 py-2 text-right text-white/80">
               Sign in
             </a>
             <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer" className="block">
@@ -143,3 +141,4 @@ export function Header() {
     </header>
   )
 }
+

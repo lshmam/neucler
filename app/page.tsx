@@ -1,5 +1,8 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { LeadStatsSection } from "@/components/lead-stats-section"
+import { IntegrationSection } from "@/components/integration-section"
+import { FeaturesShowcase } from "@/components/features-showcase"
 import { ProblemSection } from "@/components/problem-section"
 import { FeaturesGrid } from "@/components/features-grid"
 import { EasyInstallSection } from "@/components/easy-install-section"
@@ -13,10 +16,13 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <ProblemSection />
+      <LeadStatsSection />
+      <FeaturesShowcase />
+      <IntegrationSection />
+      {/* <ProblemSection /> */}
       <FeaturesGrid />
-      <EasyInstallSection />
-      <QuoteSection />
+      {/* <EasyInstallSection /> */}
+      {/* <QuoteSection /> */}
       <FAQSection />
       <CTASection />
       <Footer />

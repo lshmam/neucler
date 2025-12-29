@@ -73,18 +73,11 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-2 group">
               <Image
-                src="/neucler-logo.png"
+                src="/neucler-logo-new.png"
                 alt="Neucler Logo"
-                width={32}
-                height={32}
-                className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 invert"
-              />
-              <Image
-                src="/neucler-type.svg"
-                alt="Neucler"
-                width={100}
-                height={24}
-                className="transition-opacity duration-300 group-hover:opacity-80 invert"
+                width={36}
+                height={36}
+                className="transition-transform duration-300 group-hover:scale-110 brightness-0 invert"
               />
             </Link>
             <p className="text-sm text-background/70">© Neucler Corp. 2025</p>
@@ -105,17 +98,17 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Large Brand Text with reveal animation */}
+        {/* Large Brand Logo with reveal animation */}
         <div
           className={`mt-12 text-center overflow-hidden transition-all duration-1000 delay-700 ${isVisible ? "opacity-100" : "opacity-0"
             }`}
         >
-          <span
-            className={`text-[120px] md:text-[200px] font-bold text-background/10 leading-none inline-block transition-transform duration-1000 ${isVisible ? "translate-y-0" : "translate-y-full"
+          <div
+            className={`transition-transform duration-1000 ${isVisible ? "translate-y-0" : "translate-y-full"
               }`}
           >
-            Neucler
-          </span>
+
+          </div>
         </div>
       </div>
     </footer>
