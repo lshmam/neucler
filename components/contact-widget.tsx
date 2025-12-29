@@ -33,7 +33,7 @@ export function ContactWidget() {
             {/* Floating Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-14 h-14 rounded-full bg-terracotta text-white shadow-lg shadow-terracotta/30 hover:shadow-xl hover:shadow-terracotta/40 transition-all duration-300 flex items-center justify-center hover:scale-105 ${isOpen ? "rotate-0" : "animate-pulse"
+                className={`w-14 h-14 rounded-full bg-foreground text-background shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-105 ${isOpen ? "rotate-0" : "animate-pulse"
                     }`}
             >
                 {isOpen ? (
@@ -46,15 +46,15 @@ export function ContactWidget() {
             {/* Popup Form */}
             <div
                 className={`absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden transition-all duration-300 ${isOpen
-                        ? "opacity-100 translate-y-0 scale-100"
-                        : "opacity-0 translate-y-4 scale-95 pointer-events-none"
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-4 scale-95 pointer-events-none"
                     }`}
             >
                 {!isSubmitted ? (
                     <>
-                        <div className="bg-terracotta px-6 py-4">
-                            <h3 className="text-white font-semibold text-lg">Get in Touch</h3>
-                            <p className="text-white/80 text-sm">
+                        <div className="bg-foreground px-6 py-4">
+                            <h3 className="text-background font-semibold text-lg">Get in Touch</h3>
+                            <p className="text-background/80 text-sm">
                                 We&apos;ll text you back shortly!
                             </p>
                         </div>
@@ -93,7 +93,7 @@ export function ContactWidget() {
                             </div>
                             <Button
                                 type="submit"
-                                className="w-full bg-terracotta hover:bg-terracotta/90 text-white rounded-full"
+                                className="w-full bg-foreground hover:bg-foreground/90 text-background rounded-full"
                             >
                                 <Send className="w-4 h-4 mr-2" />
                                 Send Message

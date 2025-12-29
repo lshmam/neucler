@@ -34,7 +34,7 @@ export function FAQSection() {
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header */}
                 <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
                         Frequently Asked Questions
                     </h2>
                 </div>
