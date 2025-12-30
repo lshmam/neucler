@@ -9,11 +9,11 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Neucler - AI Employee for Business",
+  title: "Neucler - Lead Conversion AI for Your Service Business",
   description: "An AI Employee that converts leads and makes you money. 24/7 lead conversion and customer engagement.",
   icons: {
-    icon: "/neucler-logo.png",
-    apple: "/neucler-logo.png",
+    icon: "/neucler-logo-new.png",
+    apple: "/neucler-logo-new.png",
   },
 }
 
