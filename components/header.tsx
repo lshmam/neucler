@@ -64,7 +64,7 @@ export function Header() {
             </Link>
 
             {/* Desktop Nav - closer to logo */}
-            <nav className="hidden lg:flex items-center gap-1">
+            {/* <nav className="hidden lg:flex items-center gap-1">
               {["Solutions", "Pricing"].map((item, index) => (
                 <Link
                   key={item}
@@ -75,7 +75,7 @@ export function Header() {
                   {item}
                 </Link>
               ))}
-            </nav>
+            </nav> */}
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -115,7 +115,7 @@ export function Header() {
           }`}
       >
         <nav className="px-6 py-4 space-y-2">
-          {["Solutions", "Pricing"].map((item, index) => (
+          {/* {["Solutions", "Pricing"].map((item, index) => (
             <Link
               key={item}
               href={item === "Solutions" ? "/solutions" : "/pricing"}
@@ -125,7 +125,7 @@ export function Header() {
             >
               {item}
             </Link>
-          ))}
+          ))} */}
           <div className="pt-4 space-y-2">
             <a href="https://app.neucler.com" className="block px-4 py-2 text-right text-white/80">
               Sign in
