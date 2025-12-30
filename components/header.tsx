@@ -127,7 +127,7 @@ export function Header() {
             </Link>
           ))} */}
           <div className="pt-4 space-y-2">
-            <a href="https://app.neucler.com" className="block px-4 py-2 text-right text-white/80">
+            <a href="https://app.neucler.com" className={`block px-4 py-2 text-right transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white/80"}`} >
               Sign in
             </a>
             <a href="https://cal.com/neucler/30min" target="_blank" rel="noopener noreferrer" className="block">
