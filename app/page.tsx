@@ -5,6 +5,7 @@ import { IntegrationSection } from "@/components/integration-section"
 import { IntegrationSection2 } from "@/components/integration-section-2"
 import { FeaturesShowcase } from "@/components/features-showcase"
 import { FeaturesShowcase2 } from "@/components/features-showcase-2"
+import { FeaturesShowcase3 } from "@/components/features-showcase-3"
 import { ProblemSection } from "@/components/problem-section"
 import { FeaturesGrid } from "@/components/features-grid"
 import { EasyInstallSection } from "@/components/easy-install-section"
@@ -19,7 +20,8 @@ export default function Home() {
       <Header />
       <HeroSection />
       <LeadStatsSection />
-      <FeaturesShowcase2 />
+      <FeaturesShowcase3 />
+
       {/* <IntegrationSection2 /> */}
       {/* <ProblemSection /> */}
       <FeaturesGrid />
