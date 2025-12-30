@@ -303,7 +303,7 @@ export function FeaturesShowcase2() {
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header */}
                 <div className="text-center mb-8 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
                         How it works
                     </h2>
                 </div>
@@ -322,7 +322,7 @@ export function FeaturesShowcase2() {
                                 <div className="lg:hidden w-full">
                                     <div className="bg-gradient-to-br from-purple-100/60 to-purple-200/40 rounded-3xl p-6">
                                         <div className="space-y-4 text-center">
-                                            <h3 className="text-xl md:text-2xl font-light text-foreground">
+                                            <h3 className="text-4xl md:text-6xl font-medium text-foreground">
                                                 {feature.title}
                                             </h3>
                                             <p className="text-sm text-foreground/70">
@@ -357,7 +357,7 @@ export function FeaturesShowcase2() {
                                     </motion.div>
                                     <div>
                                         <motion.h4
-                                            className="text-xl md:text-2xl font-light text-foreground mb-2"
+                                            className="text-2xl md:text-4xl font-medium text-foreground mb-2"
                                             animate={{ y: activeIndex === index ? 0 : 5 }}
                                             transition={{ duration: 0.3 }}
                                         >

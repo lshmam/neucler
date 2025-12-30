@@ -86,7 +86,7 @@ export function LeadStatsSection() {
                             className="bg-gradient-to-br from-purple-200/80 to-purple-300/60 rounded-2xl p-6 md:p-8"
                         >
                             <div className="grid grid-cols-2 md:grid-cols-1 gap-4 items-center">
-                                <div className="text-5xl md:text-6xl lg:text-7xl font-light text-foreground md:mb-4">
+                                <div className="text-5xl md:text-6xl lg:text-7xl font-medium text-foreground md:mb-4">
                                     <AnimatedCounter end={stat.value} />
                                 </div>
                                 <p className="text-base md:text-lg text-foreground/80">
@@ -99,7 +99,7 @@ export function LeadStatsSection() {
 
                 {/* Bottom Text */}
                 <div className="text-center">
-                    <p className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground">
+                    <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground">
                         CRMs track contacts They don't explain conversations
                     </p>
                 </div>
