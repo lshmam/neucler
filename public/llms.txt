@@ -1,0 +1,29 @@
+# Neucler
+
+> AI-powered lead conversion platform for service businesses
+
+## About
+Neucler transforms inbound calls into booked revenue through AI-powered lead scoring, automated follow-ups, and front desk coaching. We help service businesses (especially auto repair shops) convert more leads without hiring additional staff.
+
+## Core Features
+- **Post-Call Performance Scoring**: Every call graded on 17+ metrics including speed, knowledge, and closing ability
+- **Unified Support Inbox**: Consolidate SMS, Email, and Calls with priority-based routing
+- **Automated SOP Playbook**: Digital knowledge base with pricing rules and best practices
+- **Missed Call Rescue**: Instant text-back to capture leads before they go elsewhere
+- **Dispute Protection**: Searchable transcripts and audio logs
+- **Smart Waitlist**: Auto-fill cancelled slots by texting your waitlist
+
+## How It Works
+1. **Capture & Understand**: Analyze inbound calls for intent, urgency, and buying signals
+2. **Score & Prioritize**: Every caller is scored and categorized for follow-up prioritization
+3. **Automate Follow Up**: Personalized, intent-aware follow-ups until the lead books
+4. **Train Your Front Desk**: Turn insights into coaching moments with real call examples
+5. **Improve Over Time**: Data-driven optimization showing what behaviors drive bookings
+
+## Contact
+- Website: https://www.neucler.com
+- Book a Demo: https://cal.com/neucler/30min
+- App: https://app.neucler.com
+
+## Pricing
+7-day free trial available. Contact us for pricing details.

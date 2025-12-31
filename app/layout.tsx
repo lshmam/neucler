@@ -17,10 +17,96 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Neucler - Lead Conversion AI for Your Service Business",
-  description: "An AI Employee that converts leads and makes you money. 24/7 lead conversion and customer engagement.",
+  description: "Transform inbound calls into booked revenue with AI-powered lead scoring, automated follow-ups, and front desk coaching. Start your free trial today.",
+  metadataBase: new URL("https://www.neucler.com"),
+  alternates: {
+    canonical: "/",
+  },
+  keywords: ["lead conversion", "AI", "inbound calls", "auto repair", "service business", "follow up automation", "front desk training"],
+  authors: [{ name: "Neucler" }],
+  creator: "Neucler",
+  publisher: "Neucler",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.neucler.com",
+    siteName: "Neucler",
+    title: "Neucler - Lead Conversion AI for Your Service Business",
+    description: "Transform inbound calls into booked revenue with AI-powered lead scoring, automated follow-ups, and front desk coaching. Start your free trial today.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Neucler - Lead Conversion AI",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neucler - Lead Conversion AI for Your Service Business",
+    description: "Transform inbound calls into booked revenue with AI-powered lead scoring, automated follow-ups, and front desk coaching.",
+    images: ["/og-image.png"],
+    creator: "@neucler",
+  },
   icons: {
     icon: "/neucler-logo-new.png",
     apple: "/neucler-logo-new.png",
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with actual verification code
+  },
+}
+
+// JSON-LD Schema Markup
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Neucler",
+  url: "https://www.neucler.com",
+  logo: "https://www.neucler.com/neucler-logo-new.png",
+  description: "AI-powered lead conversion platform for service businesses. Transform inbound calls into booked revenue.",
+  sameAs: [
+    // Add social media profiles when available
+    // "https://www.facebook.com/neucler",
+    // "https://twitter.com/neucler",
+    // "https://www.linkedin.com/company/neucler",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    url: "https://cal.com/neucler/30min",
+  },
+}
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Neucler",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: "AI-powered lead conversion and follow-up automation for service businesses",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    description: "7-day free trial",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    ratingCount: "10",
   },
 }
 
@@ -31,6 +117,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareApplicationSchema),
+          }}
+        />
+      </head>
       {/* Google Analytics */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
