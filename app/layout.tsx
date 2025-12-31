@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     apple: "/neucler-logo-new.png",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
+    google: "ZAD0mNqw5DLfsvZZNt3DxCBwuGXz4_VU0MP_CpdLacI",
   },
 }
 
