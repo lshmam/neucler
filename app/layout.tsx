@@ -77,15 +77,18 @@ const organizationSchema = {
   url: "https://www.neucler.com",
   logo: "https://www.neucler.com/neucler-logo-new.png",
   description: "AI-powered lead conversion platform for service businesses. Transform inbound calls into booked revenue.",
+  telephone: "+17782004642",
   sameAs: [
-    // Add social media profiles when available
-    // "https://www.facebook.com/neucler",
-    // "https://twitter.com/neucler",
-    // "https://www.linkedin.com/company/neucler",
+    "https://www.facebook.com/neuclerai",
+    "https://twitter.com/neuclerai",
+    "https://www.linkedin.com/company/neuclerai",
+    "https://www.instagram.com/neuclerai",
+    "https://www.youtube.com/@neuclerai",
   ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
+    telephone: "+17782004642",
     url: "https://cal.com/neucler/30min",
   },
 }
