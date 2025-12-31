@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import { Inbox, BookOpen, BarChart3, PhoneMissed, Shield, CalendarCheck, LucideIcon } from 'lucide-react'
+import { BlurReveal } from "@/components/BlurReveal"
 
 interface FeatureCardData {
-    icon: LucideIcon
     title: string
     description: string
     label: string
@@ -13,39 +13,33 @@ interface FeatureCardData {
 
 const features: FeatureCardData[] = [
     {
-        icon: BarChart3,
         title: "Post-Call Performance Scoring",
-        description: "Every call is graded on Speed, Knowledge, and Closing ability.",
+        description: "Every call is graded on 17+ different metrics such as speed, knowledge, closing ability.",
         label: "Analytics",
         image: "/call-center-1.jpg"
     },
     {
-        icon: Inbox,
         title: "Unified Support Inbox",
         description: "Consolidate SMS, Email, and Calls. Prioritize urgent inquiries over routine status checks.",
         label: "Communication"
     },
     {
-        icon: BookOpen,
         title: "Automated SOP Playbook",
         description: "Turn your tribal knowledge into a searchable digital brain with your own pricing rules.",
         label: "Knowledge"
     },
     {
-        icon: PhoneMissed,
         title: "Missed Call Rescue",
         description: "Instantly text back missed calls to capture the lead before they go elsewhere.",
         label: "Recovery",
         image: "/call-center-2.jpg"
     },
     {
-        icon: Shield,
         title: "Dispute Protection",
         description: "Searchable transcripts and audio logs to resolve disputes instantly.",
         label: "Security"
     },
     {
-        icon: CalendarCheck,
         title: "Smart Waitlist",
         description: "Auto-fill cancelled slots by texting your waitlist. Keep your schedule full.",
         label: "Scheduling"
@@ -55,15 +49,26 @@ const features: FeatureCardData[] = [
 export function FeaturesGrid() {
     return (
         <section className="py-20 bg-background">
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
-                {/* Section Header */}
-                <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4">
-                        Everything Your Team Needs
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Six powerful tools that work together to automate your customer service and improve results.
-                    </p>
+            <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16">
+                {/* Section Label */}
+                <div className="mb-6">
+                    <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                        [02] Features
+                    </span>
+                </div>
+
+                {/* Section Header - Left aligned */}
+                <div className="text-left mb-12 md:mb-16 max-w-2xl">
+                    <BlurReveal delay={0} duration={0.8} yOffset={20}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight tracking-tight">
+                            Everything Your Team Needs
+                        </h2>
+                    </BlurReveal>
+                    <BlurReveal delay={0.15} duration={0.8} yOffset={20}>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            Six powerful tools that work together to automate your customer service and improve results.
+                        </p>
+                    </BlurReveal>
                 </div>
 
                 {/* Bento Grid */}
@@ -109,9 +114,7 @@ export function FeaturesGrid() {
                                     <span className={`text-xs font-medium uppercase tracking-wider ${feature.image ? 'text-neutral-300' : 'text-neutral-500'}`}>
                                         {feature.label}
                                     </span>
-                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${feature.image ? 'bg-white/10 group-hover:bg-white/20' : 'bg-neutral-200 group-hover:bg-neutral-300'}`}>
-                                        <feature.icon className={`w-5 h-5 ${feature.image ? 'text-white' : 'text-neutral-700'}`} />
-                                    </div>
+
                                 </div>
 
                                 {/* Content */}

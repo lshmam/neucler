@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { BlurReveal } from "@/components/BlurReveal"
 
 interface AnimatedCounterProps {
     end: number
@@ -66,20 +67,33 @@ const stats = [
 
 export function LeadStatsSection() {
     return (
-        <section className="py-16 md:py-24 bg-background">
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
-                {/* Header */}
-                <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6">
-                        You're paying for leads that never convert
-                    </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Inbound calls are your most valuable leads, but many are mishandled, under followed, or forgotten entirely.
-                    </p>
+        <section className="py-20 md:py-32 bg-background">
+            {/* Generous horizontal margins for readability */}
+            <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16">
+                {/* Section Label */}
+                <div className="mb-6">
+                    <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                        [00] Why
+                    </span>
+                </div>
+
+                {/* Header - Left aligned with constrained width for optimal line length */}
+                <div className="text-left mb-16 md:mb-20 max-w-2xl">
+                    <BlurReveal delay={0} duration={0.8} yOffset={20}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight tracking-tight">
+                            You're paying for leads that never convert
+                        </h2>
+                    </BlurReveal>
+                    <BlurReveal delay={0.15} duration={0.8} yOffset={20}>
+                        {/* Optimal line length: 50-75 characters for readability */}
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            Inbound calls are your most valuable leads, but many are mishandled, under followed, or forgotten entirely.
+                        </p>
+                    </BlurReveal>
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
@@ -89,19 +103,12 @@ export function LeadStatsSection() {
                                 <div className="text-5xl md:text-6xl lg:text-7xl font-medium text-foreground md:mb-4">
                                     <AnimatedCounter end={stat.value} />
                                 </div>
-                                <p className="text-base md:text-lg text-foreground/80">
+                                <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
                                     {stat.description}
                                 </p>
                             </div>
                         </div>
                     ))}
-                </div>
-
-                {/* Bottom Text */}
-                <div className="text-center">
-                    <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground">
-                        CRMs track contacts They don't explain conversations
-                    </p>
                 </div>
             </div>
         </section>

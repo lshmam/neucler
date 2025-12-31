@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { BlurReveal } from "@/components/BlurReveal"
 
 const STEP_DURATION = 5000 // 5 seconds per step
 
@@ -115,7 +116,7 @@ export function FeaturesShowcase3() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
+            <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16">
                 {/* Section Label */}
                 <div className="mb-6">
                     <span className="text-sm text-muted-foreground uppercase tracking-wider">
@@ -124,14 +125,18 @@ export function FeaturesShowcase3() {
                 </div>
 
                 {/* Header */}
-                <div className="mb-12 md:mb-16 max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-                        Don't just track calls. Convert them.
-                    </h2>
-                    <p className="text-xl md:text-2xl text-muted-foreground">
-                        Neucler turns every inbound call into actionable insights,
-                        automating follow-up while building a complete picture of your customer journey.
-                    </p>
+                <div className="mb-12 md:mb-16 max-w-2xl">
+                    <BlurReveal delay={0} duration={0.8} yOffset={20}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight tracking-tight">
+                            Don't just track calls. Convert them.
+                        </h2>
+                    </BlurReveal>
+                    <BlurReveal delay={0.15} duration={0.8} yOffset={20}>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            Neucler turns every inbound call into actionable insights,
+                            automating follow-up while building a complete picture of your leads journey.
+                        </p>
+                    </BlurReveal>
                 </div>
 
                 {/* Main Content - Split Layout */}

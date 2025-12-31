@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ContactWidget } from "@/components/contact-widget"
 import "./globals.css"
@@ -10,6 +10,10 @@ const GA_MEASUREMENT_ID = "G-QW106S9YYJ"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+})
 
 export const metadata: Metadata = {
   title: "Neucler - Lead Conversion AI for Your Service Business",
@@ -40,7 +44,7 @@ export default function RootLayout({
           gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased ${playfair.variable}`}>
         {children}
         <ContactWidget />
         <Analytics />

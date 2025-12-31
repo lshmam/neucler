@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { BlurReveal } from "@/components/BlurReveal"
 
 const faqs = [
     {
@@ -30,17 +31,26 @@ export function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     return (
-        <section className="py-20 bg-background" id="faq">
-            <div className="container mx-auto px-6 md:px-12 lg:px-16">
-                {/* Section Header */}
-                <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
-                        Frequently Asked Questions
-                    </h2>
+        <section className="py-20 md:py-32 bg-background" id="faq">
+            <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16">
+                {/* Section Label */}
+                <div className="mb-6">
+                    <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                        [03] FAQ
+                    </span>
                 </div>
 
-                {/* FAQ Accordion */}
-                <div className="max-w-4xl mx-auto">
+                {/* Section Header - Left aligned */}
+                <div className="mb-12 md:mb-16 text-left max-w-2xl">
+                    <BlurReveal delay={0} duration={0.8} yOffset={20}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight tracking-tight">
+                            Frequently Asked Questions
+                        </h2>
+                    </BlurReveal>
+                </div>
+
+                {/* FAQ Accordion - Full width */}
+                <div className="w-full">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
@@ -62,7 +72,7 @@ export function FAQSection() {
                                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"
                                     }`}
                             >
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-muted-foreground leading-relaxed max-w-4xl">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -73,4 +83,3 @@ export function FAQSection() {
         </section>
     )
 }
-
